@@ -40,6 +40,15 @@ public class WordTest {
     assertTrue(Word.all().contains(testWord2));
   }
 
+
+  @Test
+  public void addDefinition_addsDefToWord() {
+    Word testWord = new Word("booger");
+    Definition testDefinition = new Definition("green");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
+
   @Test
   public void clear_removesAllWordInstancesFromMemory() {
     Word testWord = new Word("booger");

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-21T17:27:28" hostname="josss-MacBook-Pro.local" time="0.002">
+<testsuite name="WordTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-08-21T17:46:08" hostname="josss-MacBook-Pro.local" time="0.003">
   <properties/>
   <testcase name="addDefinition_addsDefToWord" classname="WordTest" time="0.0"/>
   <testcase name="word_returnsName_true" classname="WordTest" time="0.0"/>
   <testcase name="clear_removesAllWordInstancesFromMemory" classname="WordTest" time="0.0"/>
-  <testcase name="getDefinitions_initiallyReturnsEmptyArrayList" classname="WordTest" time="0.0"/>
+  <testcase name="getDefinitions_initiallyReturnsEmptyArrayList" classname="WordTest" time="0.001"/>
   <testcase name="find_returnsNullWhenNoWordFound_null" classname="WordTest" time="0.0"/>
   <testcase name="all_returnsAllInstancesOfWord_true" classname="WordTest" time="0.0"/>
   <testcase name="word_instantiatesCorrectly_true" classname="WordTest" time="0.0"/>

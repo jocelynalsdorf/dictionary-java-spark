@@ -53,4 +53,19 @@ public class AppTest extends FluentTest{
 	  click("a", withText("Add a new definition"));
 	  assertThat(pageSource()).contains("Add a new definition for booger");
 	}
+
+	@Test
+	public void definitionsAreDisplayed() {
+	  goTo("http://localhost:4567/words/new");
+	  fill("#name").with("mice");
+	  submit(".btn");
+	  click("a", withText("View All Words"));
+	  click("a", withText("mice"));
+	  click("a", withText("Add a new definition"));
+	  fill("#description").with("green");
+	  submit(".btn-default");
+	  assertThat(pageSource()).contains("green");
+	}
+
+
 }	

@@ -26,21 +26,31 @@ public class AppTest extends FluentTest{
 
  	@Test
 	public void wordIsCreatedTest() {
-  goTo("http://localhost:4567/");
-  click("a", withText("Add a new Word"));
-  fill("#name").with("booger");
-  submit(".btn");
-  assertThat(pageSource()).contains("Success!");
+	  goTo("http://localhost:4567/");
+	  click("a", withText("Add a new Word"));
+	  fill("#name").with("booger");
+	  submit(".btn");
+	  assertThat(pageSource()).contains("Success!");
 	}
-
 
  	@Test
 	public void wordIsShownTest() {
-  goTo("http://localhost:4567/");
-  click("a", withText("Add a new Word"));
-  fill("#name").with("booger");
-  submit(".btn");
-  click("a", withText("View All Words"));
-  assertThat(pageSource()).contains("booger");
+	  goTo("http://localhost:4567/");
+	  click("a", withText("Add a new Word"));
+	  fill("#name").with("booger");
+	  submit(".btn");
+	  click("a", withText("View All Words"));
+	  assertThat(pageSource()).contains("booger");
+	}
+
+	@Test
+	public void wordDefinitionsFormIsDisplayed() {
+	  goTo("http://localhost:4567/words/new");
+	  fill("#name").with("booger");
+	  submit(".btn");
+	  click("a", withText("View All Words"));
+	  click("a", withText("booger"));
+	  click("a", withText("Add a new definition"));
+	  assertThat(pageSource()).contains("Add a new definition for booger");
 	}
 }	

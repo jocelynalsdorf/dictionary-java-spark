@@ -18,9 +18,29 @@ public class AppTest extends FluentTest{
   @ClassRule
   public static ServerRule server = new ServerRule();
 
- //  @Test
- //  public void rootTest() {
- //   goTo("http://localhost:4567/");
- //   assertThat(pageSource()).contains("Yay! Another Dictionary!!");
- // }
-}
+  @Test
+  public void rootTest() {
+   goTo("http://localhost:4567/");
+   assertThat(pageSource()).contains("Yay! Another Dictionary!!");
+ 	}
+
+ 	@Test
+	public void wordIsCreatedTest() {
+  goTo("http://localhost:4567/");
+  click("a", withText("Add a new Word"));
+  fill("#name").with("booger");
+  submit(".btn");
+  assertThat(pageSource()).contains("Success!");
+	}
+
+
+ 	@Test
+	public void wordIsShownTest() {
+  goTo("http://localhost:4567/");
+  click("a", withText("Add a new Word"));
+  fill("#name").with("booger");
+  submit(".btn");
+  click("a", withText("View All Words"));
+  assertThat(pageSource()).contains("booger");
+	}
+}	

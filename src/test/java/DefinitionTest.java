@@ -41,4 +41,17 @@ public class DefinitionTest {
     assertEquals(Definition.find(myDefinitionTwo.getId()), myDefinitionTwo);
   }
 
+  @Test
+  public void definition_retunsNullifDefinitionNotFound_null(){
+    Definition myDefinition = new Definition("slimey clump of goodness");
+    assertTrue(Definition.find(999) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllDefiDefinitionFromArrayList() {
+    Definition myDefinition = new Definition("slimey clump of goodness");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
+  }
+
 }

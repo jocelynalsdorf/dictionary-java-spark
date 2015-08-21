@@ -15,7 +15,7 @@ public class DefinitionTest {
   }
 
   @Test
-  public void definition_instantiatesNameWithDescription_true(){
+  public void definition_instantiatesWithDescription_true(){
     Definition myDefinition = new Definition("slimey clump of goodness");
     assertEquals("slimey clump of goodness", myDefinition.getDescription());
   }
@@ -26,6 +26,19 @@ public class DefinitionTest {
     Definition myDefinitionTwo = new Definition("green clump of goodness");
     assertTrue(Definition.all().contains(myDefinitionOne));
     assertTrue(Definition.all().contains(myDefinitionTwo));
+  }
+
+  @Test
+  public void definition_instantiatesWitId_true(){
+    Definition myDefinition = new Definition("slimey clump of goodness");
+    assertEquals(Definition.all().size(), myDefinition.getId());
+  }
+
+  @Test
+  public void definition_returnsDefinitionWithSameId_defintionTwo(){
+    Definition myDefinitionOne = new Definition("slimey clump of goodness");
+    Definition myDefinitionTwo = new Definition("green clump of goodness");
+    assertEquals(Definition.find(myDefinitionTwo.getId()), myDefinitionTwo);
   }
 
 }

@@ -18,4 +18,17 @@ public class Word{
     return mName;
   }
 
+  public int getId(){
+    return mId;
+  }
+
+  public ArrayList<Definition> getDefinitions(){
+    return mDefinitions;
+  }
+
+  public static ArrayList<Word> all() {
+    return instances;
+  }
+
+
 }//end class

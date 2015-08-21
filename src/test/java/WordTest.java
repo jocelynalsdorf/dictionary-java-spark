@@ -1,6 +1,6 @@
 import org.junit.*;
 import static org.junit.Assert.*;
-import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 
 public class WordTest {
@@ -20,6 +20,16 @@ public class WordTest {
     assertEquals("booger", testWord.getName());
   }
 
-  
+  @Test
+  public void getId_returnsWordId() {
+    Word testWord = new Word("booger");
+    assertTrue(Word.all().size() == testWord.getId());
+  }
+
+  @Test
+  public void getDefinitions_initiallyReturnsEmptyArrayList() {
+    Word testWord = new Word("booger");
+    assertTrue(testWord.getDefinitions() instanceof ArrayList);
+  }
 
 }

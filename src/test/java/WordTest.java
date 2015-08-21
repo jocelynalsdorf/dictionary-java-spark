@@ -32,4 +32,24 @@ public class WordTest {
     assertTrue(testWord.getDefinitions() instanceof ArrayList);
   }
 
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word testWord1 = new Word("booger");
+    Word testWord2 = new Word("goober");
+    assertTrue(Word.all().contains(testWord1));
+    assertTrue(Word.all().contains(testWord2));
+  }
+
+  @Test
+  public void clear_removesAllWordInstancesFromMemory() {
+    Word testWord = new Word("booger");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
+
+  @Test
+  public void find_returnsNullWhenNoWordFound_null() {
+    assertTrue(Word.find(999) == null);
+  }
+
 }

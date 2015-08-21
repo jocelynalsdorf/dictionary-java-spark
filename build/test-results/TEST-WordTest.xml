@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2015-08-21T16:15:29" hostname="josss-MacBook-Pro.local" time="0.002">
+<testsuite name="WordTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2015-08-21T16:20:34" hostname="josss-MacBook-Pro.local" time="0.004">
   <properties/>
   <testcase name="word_returnsName_true" classname="WordTest" time="0.001"/>
+  <testcase name="clear_removesAllWordInstancesFromMemory" classname="WordTest" time="0.0"/>
   <testcase name="getDefinitions_initiallyReturnsEmptyArrayList" classname="WordTest" time="0.0"/>
-  <testcase name="word_instantiatesCorrectly_true" classname="WordTest" time="0.001"/>
+  <testcase name="find_returnsNullWhenNoWordFound_null" classname="WordTest" time="0.0"/>
+  <testcase name="all_returnsAllInstancesOfWord_true" classname="WordTest" time="0.0"/>
+  <testcase name="word_instantiatesCorrectly_true" classname="WordTest" time="0.0"/>
   <testcase name="getId_returnsWordId" classname="WordTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

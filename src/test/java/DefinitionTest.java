@@ -14,4 +14,18 @@ public class DefinitionTest {
     assertEquals(true, myDefinition instanceof Definition);
   }
 
+  @Test
+  public void definition_instantiatesNameWithDescription_true(){
+    Definition myDefinition = new Definition("slimey clump of goodness");
+    assertEquals("slimey clump of goodness", myDefinition.getDescription());
+  }
+
+  @Test
+  public void definition_returnsAllInstancesOfDefinitioin_true(){
+    Definition myDefinitionOne = new Definition("slimey clump of goodness");
+    Definition myDefinitionTwo = new Definition("green clump of goodness");
+    assertTrue(Definition.all().contains(myDefinitionOne));
+    assertTrue(Definition.all().contains(myDefinitionTwo));
+  }
+
 }

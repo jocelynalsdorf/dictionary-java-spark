@@ -12,5 +12,13 @@ public class Definition {
     instances.add(this);
     mId = instances.size();
   }
-  
+
+  public String getDescription(){
+    return mDescription;
+  }
+
+  public static ArrayList<Definition> all(){
+    return instances;
+  }
+
 }//end of class

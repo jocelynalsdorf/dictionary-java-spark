@@ -1,3 +1,8 @@
 <h1>Yay! Another Dictionary!!</h1>
 
-    
+<p><a href="/words/new">Add a new Word<a></p>
+
+
+#foreach($word in $words)
+<h3><a href="/words/$word.getId()">$word.getName()</a></h3>
+#end

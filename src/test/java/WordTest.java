@@ -40,7 +40,6 @@ public class WordTest {
     assertTrue(Word.all().contains(testWord2));
   }
 
-
   @Test
   public void addDefinition_addsDefToWord() {
     Word testWord = new Word("booger");

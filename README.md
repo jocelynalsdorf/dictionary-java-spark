@@ -16,4 +16,4 @@ FluentLenium
 JUnit
 
 <h2>Copyright</h2>
- MIT License. Copyright 2015  Jocelyn Alsdorf
+MIT License. Copyright 2015  Jocelyn Alsdorf

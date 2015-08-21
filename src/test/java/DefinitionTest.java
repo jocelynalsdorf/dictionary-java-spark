@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class DefinitionTest {
 
   @Rule
-   public ClearRule clearRule = new ClearRule();
+  public ClearRule clearRule = new ClearRule();
 
   @Test
   public void definition_instantiatesCorrectly_true() {

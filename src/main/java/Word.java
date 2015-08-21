@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
+
 public class Word{
   private static ArrayList<Word> instances = new ArrayList<Word>();
-
   private String mName;
   private int mId;
   private ArrayList<Definition> mDefinitions;

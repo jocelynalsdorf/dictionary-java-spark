@@ -1,15 +1,25 @@
-<h2>Definitions for $word.getName()</h2>
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
 
-#if ($word.getDefinitions() == [])
-<h2>There are no definitions yet. You look pretty smart. Why don't you add one?</h2>
-#end
-<a href="/words/$word.getId()/definitions/new">Add a new definition</a>
-<ul>
-	#foreach ($definition in $word.getDefinitions())
-	<li><a href="/definition/$definition.getId()">$definition.getDescription()</a></li>
-	#end
-</ul>
+		<h2 class="well">Definitions for $word.getName()</h2>
+		<br>
+		#if ($word.getDefinitions() == [])
+		<p class="message">There are no definitions yet. You look pretty smart. Why don't you add one?</p>
+		#end
+		<br>
+		<a href="/words/$word.getId()/definitions/new">Add a new definition</a>
+		#if ($word.getDefinitions() != [])
+		<h3>Here are all the definitions:</h3>
+		#end
+		<ul>
+			#foreach ($definition in $word.getDefinitions())
+			<li><a href="/definition/$definition.getId()">$definition.getDescription()</a></li>
+			#end
+		</ul>
+		<br>
+		<a href="/">Home</a>
 
-
-
-<a href="/">Home</a>
+	</div>
+	<div class="col-md-2"></div>
+</div>

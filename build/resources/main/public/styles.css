@@ -1,0 +1,30 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 45px;
+	font-family:'Patrick Hand', cursive;;
+	text-align: center;
+}
+
+h2 {
+	font-size: 39px;
+	font-family: 'Patrick Hand', cursive;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+.row {
+	margin-top: 35px;
+}
+
+.multi img {
+	width: 370px;
+  height: 300px;
+  padding: 2px;
+}
+}

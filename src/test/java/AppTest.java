@@ -67,5 +67,19 @@ public class AppTest extends FluentTest{
 	  assertThat(pageSource()).contains("green");
 	}
 
+	@Test
+	public void definitionisDisplayedonSingleDefpage() {
+	  goTo("http://localhost:4567/words/new");
+	  fill("#name").with("snot");
+	  submit(".btn");
+	  click("a", withText("View All Words"));
+	  click("a", withText("snot"));
+	  click("a", withText("Add a new definition"));
+	  fill("#description").with("slime");
+	  submit(".btn-default");
+	  click("a", withText("slime"));
+	  assertThat(pageSource()).contains("slime");
+	}
+
 
 }	

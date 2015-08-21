@@ -1,8 +1,14 @@
-<h1>Yay! Another Dictionary!!</h1>
+<div class="row">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+		<h1 class="well">Yay! Another Dictionary!!</h1>
 
-<p><a href="/words/new">Add a new Word<a></p>
-
-
-#foreach($word in $words)
-<h3><a href="/words/$word.getId()">$word.getName()</a></h3>
-#end
+		#foreach($word in $words)
+		<h3><a href="/words/$word.getId()">$word.getName()</a><hr></h3>
+		#end
+		<br>
+		<p><a href="/words/new">Add a new Word<a></p> 
+		<div class="img center-block"><img src="images/dictionary.png"></div>
+	</div>
+	<div class="col-md-2"></div>
+</div>

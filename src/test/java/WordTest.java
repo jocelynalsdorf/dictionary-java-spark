@@ -56,6 +56,14 @@ public class WordTest {
   }
 
   @Test
+  public void adddef_addsDefinitionToWord() {
+    Word testWord = new Word("fart");
+    Definition testDefinition = new Definition("smelly");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
+  }
+
+  @Test
   public void find_returnsNullWhenNoWordFound_null() {
     assertTrue(Word.find(999) == null);
   }

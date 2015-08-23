@@ -11,7 +11,7 @@ public class App {
 		
 		get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      model.put("words", Word.all());
+      model.put("words", Word.all()); 
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
    	}, new VelocityTemplateEngine());
@@ -28,6 +28,8 @@ public class App {
       String name = request.queryParams("name");
       Word newWord = new Word(name);
       model.put("word", newWord);
+      //only put .all if you want to return directly from post route to index with no reload/refresh
+     // model.put("words", Word.all());
       model.put("template", "templates/success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
